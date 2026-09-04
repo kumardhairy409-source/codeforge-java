@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeForge Java</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/material-darker.min.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>⚡ CodeForge Java</h1>
+        <p>Online Java Compiler</p>
+    </header>
+
+    <main>
+
+        <section class="editor-section">
+            <div class="section-title">
+                <span>Java Code</span>
+                <span>main.java</span>
+            </div>
+
+            <textarea id="code"></textarea>
+        </section>
+
+        <section class="input-section">
+            <div class="section-title">
+                <span>Input</span>
+                <button id="clearInput">Clear</button>
+            </div>
+
+            <textarea id="stdin"
+                placeholder="Enter program input here..."></textarea>
+        </section>
+
+        <div class="buttons">
+            <button id="runBtn">▶ Run Java</button>
+            <button id="resetBtn">↻ Reset</button>
+        </div>
+
+        <section class="output-section">
+            <div class="section-title">
+                <span>Output</span>
+                <button id="clearOutput">Clear</button>
+            </div>
+
+            <pre id="output">Output will appear here...</pre>
+        </section>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
