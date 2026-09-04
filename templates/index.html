@@ -1,66 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CodeForge Java — Online Java Compiler</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-          content="CodeForge Java is a fast, modern online Java compiler for writing, testing and running Java code.">
+    <title>CodeForge — Java Online Compiler</title>
 
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"
+    >
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/material-darker.min.css"
+    >
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/material-darker.min.css">
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-
-<nav class="navbar">
+<header class="navbar">
 
     <div class="brand">
-        <span class="brand-icon">⚡</span>
-        <span>CodeForge</span>
+        <div class="brand-icon">&lt;/&gt;</div>
+
+        <div>
+            <div class="brand-name">CodeForge</div>
+            <div class="brand-subtitle">Java Compiler</div>
+        </div>
     </div>
 
-    <div class="nav-links">
+    <nav>
         <a href="#features">Features</a>
         <a href="#compiler">Compiler</a>
-    </div>
+    </nav>
 
     <a href="#compiler" class="nav-button">
         Start Coding
     </a>
 
-</nav>
+</header>
 
 
-<!-- HERO -->
+<main>
 
 <section class="hero">
 
     <div class="hero-content">
 
         <div class="badge">
-            ⚡ Java Development Environment
+            ⚡ Online Java Development
         </div>
 
         <h1>
-            Write Java.<br>
+            Write Java.
             <span>Run it instantly.</span>
         </h1>
 
-        <p class="hero-description">
-            A fast and modern online Java compiler built for
-            students, developers and anyone who wants to code
-            directly from the browser.
+        <p>
+            A modern Java coding environment with a
+            real interactive terminal experience.
         </p>
 
         <div class="hero-buttons">
@@ -75,50 +84,24 @@
 
         </div>
 
-        <div class="hero-stats">
-
-            <div>
-                <strong>Java</strong>
-                <span>Powered</span>
-            </div>
-
-            <div>
-                <strong>Online</strong>
-                <span>Compiler</span>
-            </div>
-
-            <div>
-                <strong>Fast</strong>
-                <span>Execution</span>
-            </div>
-
-        </div>
-
     </div>
-
-    <div class="hero-glow"></div>
 
 </section>
 
 
-<!-- FEATURES -->
-
-<section class="features" id="features">
+<section id="features" class="features">
 
     <div class="section-heading">
-
-        <span class="small-label">WHY CODEFORGE?</span>
+        <div class="small-title">POWERFUL TOOLS</div>
 
         <h2>
-            Everything you need to
-            <span>code in Java.</span>
+            Everything you need to code
         </h2>
 
         <p>
-            Simple enough for beginners. Powerful enough
-            for everyday Java practice.
+            A clean environment designed for learning,
+            experimenting and building Java programs.
         </p>
-
     </div>
 
 
@@ -126,27 +109,13 @@
 
         <div class="feature-card">
 
-            <div class="feature-icon">⚡</div>
-
-            <h3>Fast Execution</h3>
-
-            <p>
-                Compile and execute Java programs directly
-                from your browser.
-            </p>
-
-        </div>
-
-
-        <div class="feature-card">
-
-            <div class="feature-icon">💻</div>
+            <div class="feature-icon">⌨</div>
 
             <h3>Smart Editor</h3>
 
             <p>
-                Write Java code in a clean developer-focused
-                coding environment.
+                Write Java with syntax highlighting,
+                line numbers and clean formatting.
             </p>
 
         </div>
@@ -154,13 +123,13 @@
 
         <div class="feature-card">
 
-            <div class="feature-icon">📱</div>
+            <div class="feature-icon">▶</div>
 
-            <h3>Mobile Friendly</h3>
+            <h3>Instant Execution</h3>
 
             <p>
-                Practice Java from your phone, tablet or
-                desktop without installing an IDE.
+                Compile and run your Java programs
+                directly from your browser.
             </p>
 
         </div>
@@ -168,13 +137,13 @@
 
         <div class="feature-card">
 
-            <div class="feature-icon">🎯</div>
+            <div class="feature-icon">⌁</div>
 
-            <h3>Practice Anywhere</h3>
+            <h3>Interactive Console</h3>
 
             <p>
-                Perfect for learning Java, testing programs
-                and preparing for programming exercises.
+                Type Scanner input directly into the
+                terminal while your program is running.
             </p>
 
         </div>
@@ -184,20 +153,14 @@
 </section>
 
 
-<!-- COMPILER -->
+<section id="compiler" class="compiler-section">
 
-<section class="compiler-area" id="compiler">
-
-    <div class="compiler-heading">
+    <div class="compiler-header">
 
         <div>
-            <span class="small-label">CODE EDITOR</span>
+            <div class="small-title">JAVA WORKSPACE</div>
 
-            <h2>Java Compiler</h2>
-
-            <p>
-                Write your program and press Run Java.
-            </p>
+            <h2>CodeForge Compiler</h2>
         </div>
 
         <div class="status">
@@ -208,97 +171,130 @@
     </div>
 
 
-    <section class="editor-section">
+    <div class="workspace">
 
-        <div class="section-title">
-            <span>Java Code</span>
-            <span>main.java</span>
-        </div>
+        <div class="editor-panel">
 
-        <textarea id="code"></textarea>
+            <div class="panel-header">
 
-    </section>
+                <span>MAIN.JAVA</span>
 
+                <button id="resetBtn">
+                    Reset
+                </button>
 
-    <section class="input-section">
+            </div>
 
-        <div class="section-title">
-
-            <span>Program Input</span>
-
-            <button id="clearInput">
-                Clear
-            </button>
+            <textarea id="code"></textarea>
 
         </div>
 
-        <textarea
-            id="stdin"
-            placeholder="Enter program input here..."></textarea>
 
-    </section>
+        <div class="console-panel">
+
+            <div class="panel-header">
+
+                <div>
+                    <span>CONSOLE</span>
+                </div>
+
+                <button id="clearOutput">
+                    Clear
+                </button>
+
+            </div>
 
 
-    <div class="buttons">
+            <div
+                id="console"
+                class="console"
+                tabindex="0"
+            >
 
-        <button id="runBtn">
-            ▶ Run Java
-        </button>
+                <div
+                    id="consoleOutput"
+                    class="console-output"
+                >
+                    <span class="system-line">
+                        CodeForge Java Console
+                    </span>
 
-        <button id="resetBtn">
-            ↻ Reset
-        </button>
+                    <span class="system-line">
+                        Press "Run Java" to start your program.
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="consoleInput"
+                    class="console-input"
+                    hidden
+                >
+
+                    <span class="prompt-symbol">&gt;</span>
+
+                    <input
+                        id="terminalInput"
+                        type="text"
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="console-footer">
+
+                <span id="consoleStatus">
+                    Ready
+                </span>
+
+                <span>
+                    Java 21
+                </span>
+
+            </div>
+
+        </div>
 
     </div>
 
 
-    <section class="output-section">
-
-        <div class="section-title">
-
-            <span>Console Output</span>
-
-            <button id="clearOutput">
-                Clear
-            </button>
-
-        </div>
-
-        <pre id="output">Output will appear here...</pre>
-
-    </section>
+    <button
+        id="runBtn"
+        class="run-button"
+    >
+        ▶ Run Java
+    </button>
 
 </section>
 
+</main>
 
-<!-- FOOTER -->
 
 <footer>
 
     <div class="footer-brand">
-        ⚡ CodeForge Java
+        &lt;/&gt; CodeForge
     </div>
 
     <p>
-        A modern online Java coding environment.
+        Learn. Build. Run.
     </p>
-
-    <div class="footer-line"></div>
-
-    <small>
-        © 2026 CodeForge. Built for learning and coding.
-    </small>
 
 </footer>
 
-
-<!-- SCRIPTS -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script>
 
-<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script
+    src="{{ url_for('static', filename='script.js') }}"
+></script>
 
 </body>
 </html>
