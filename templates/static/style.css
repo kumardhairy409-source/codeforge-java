@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 6px 0 0;
+    color: #8b949e;
+}
+
+main {
+    width: min(1000px, 95%);
+    margin: 20px auto;
+}
+
+section {
+    margin-bottom: 18px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background: #21262d;
+    font-weight: bold;
+}
+
+.section-title button {
+    background: transparent;
+    border: none;
+    color: #8b949e;
+    cursor: pointer;
+}
+
+.CodeMirror {
+    height: 420px;
+    font-size: 15px;
+}
+
+#stdin {
+    width: 100%;
+    min-height: 120px;
+    padding: 14px;
+    background: #0d1117;
+    color: #e6edf3;
+    border: none;
+    outline: none;
+    resize: vertical;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#runBtn {
+    background: #238636;
+    color: white;
+}
+
+#resetBtn {
+    background: #30363d;
+    color: white;
+}
+
+#output {
+    min-height: 180px;
+    margin: 0;
+    padding: 15px;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    font-family: monospace;
+    color: #e6edf3;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 23px;
+    }
+
+    .CodeMirror {
+        height: 350px;
+    }
+
+    main {
+        width: 96%;
+    }
+}
